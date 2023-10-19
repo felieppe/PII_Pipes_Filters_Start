@@ -25,6 +25,13 @@ namespace CompAndDel
             IPicture p3 = pn.Send(p2);
 
             provider.SavePicture(p3, @"beer2.jpg");
+
+            // Ejercicio 2.
+            string baseFolder = "./trans/";
+
+            provider.SavePicture(picture, baseFolder + @"beer_base_picture.jpg");
+            provider.SavePicture(p1, baseFolder + @"beer_after_filter_negative.jpg");
+            provider.SavePicture(p2, baseFolder + @"beer_after_filter_greyscale.jpg");
         }
     }
 }
